@@ -23,12 +23,12 @@ This is a simple Node.js project designed with intentionally vulnerable dependen
    npm start
    ```
 
-## Vulnerable Dependencies Included
-- `lodash@4.17.4`: Prototype Pollution (CVE-2018-16487, CVE-2019-10744)
-- `express@4.16.0`: Multiple vulnerabilities (CVE-2018-3717, CVE-2022-24999, etc.)
-- `minimist@1.2.0`: Prototype Pollution (CVE-2020-7598)
-- `axios@0.18.0`: Server-Side Request Forgery (SSRF) (CVE-2020-28168)
-- `serialize-javascript@2.1.1`: Remote Code Execution (RCE) (CVE-2020-7660)
+## Dependencies (Upgraded to Secure Versions)
+- `lodash@^4.18.1` (Patched against Prototype Pollution, Command Injection, etc.)
+- `express@^4.22.2` (Patched against body-parser, send, and path-to-regexp vulnerabilities)
+- `minimist@^1.2.8` (Patched against Prototype Pollution)
+- `axios@^1.17.0` (Patched against SSRF, DoS, and Prototype Pollution)
+- `serialize-javascript@^7.0.5` (Patched against RCE)
 
 ## CI/CD Integration (GitHub Actions)
 
