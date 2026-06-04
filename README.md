@@ -29,3 +29,15 @@ This is a simple Node.js project designed with intentionally vulnerable dependen
 - `minimist@1.2.0`: Prototype Pollution (CVE-2020-7598)
 - `axios@0.18.0`: Server-Side Request Forgery (SSRF) (CVE-2020-28168)
 - `serialize-javascript@2.1.1`: Remote Code Execution (RCE) (CVE-2020-7660)
+
+## CI/CD Integration (GitHub Actions)
+
+A GitHub Actions workflow is pre-configured at [.github/workflows/snyk.yml](file:///home/mohit/training/devsecops/new/.github/workflows/snyk.yml) to scan this project for vulnerabilities on every push or pull request.
+
+To make it work:
+1. Generate a Snyk API token from your Snyk Account Settings.
+2. In your GitHub repository, go to **Settings** > **Secrets and variables** > **Actions**.
+3. Add a new repository secret:
+   - **Name**: `SNYK_TOKEN`
+   - **Value**: *Your Snyk API Token*
+
